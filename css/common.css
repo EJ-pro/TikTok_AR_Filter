@@ -39,7 +39,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f00;
+    color: #25F4EE;
+}
+
+/* 현재 페이지 링크의 스타일 */
+.current-page {
+    color: #25F4EE !important;
 }
 
 /* 반응형 디자인 */
@@ -72,6 +77,6 @@ nav ul li a:hover {
     }
     
     nav ul li a:hover {
-        color: #f00;
+        color: #25F4EE;
     }
 }
