@@ -1,0 +1,44 @@
+/* home.css */
+main {
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.images img {
+    margin-bottom: 20px;
+}
+
+/* 이미지 너비 옵션 */
+.images img.width-80 {
+    width: 80%;
+}
+
+.images img.width-100 {
+    width: 100%;
+}
+
+.content {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .images img.width-80,
+    .images img.width-100 {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,9 @@
+/* apply.css */
+/* 필요에 따라 APPLY 페이지의 스타일 추가 */
+main {
+    padding: 20px;
+}
+
+#apply {
+    text-align: center;
+}
