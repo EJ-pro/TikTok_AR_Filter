@@ -13,7 +13,6 @@ header {
     align-items: center;
     background-color: #000;
     color: #fff;
-    padding: 10px 20px;
     width: 100%;
     transition: top 0.3s; /* 슬라이드 효과를 위한 transition 추가 */
 }
@@ -33,7 +32,7 @@ header {
 }
 
 .logo {
-    width: 150px; /* 로고의 너비 조정 */
+    width: 100px; /* 로고의 너비 조정 */
 }
 
 nav ul {
