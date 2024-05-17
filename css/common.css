@@ -14,6 +14,22 @@ header {
     background-color: #000;
     color: #fff;
     padding: 10px 20px;
+    width: 100%;
+    transition: top 0.3s; /* 슬라이드 효과를 위한 transition 추가 */
+}
+
+/* 헤더가 화면 위쪽에 고정되도록 설정 */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+}
+
+/* 헤더가 고정될 때 상단 여백 추가 */
+.main-content {
+    padding-top: 70px; /* 헤더의 높이만큼 여백 추가 */
 }
 
 .logo {
