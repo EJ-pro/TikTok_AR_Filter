@@ -67,7 +67,8 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     header {
         align-items: center;
-        padding: 10px; /* 반응형에서 헤더 전체에 패딩 적용 */
+        padding-top: 10px; /* 반응형에서 헤더 전체에 패딩 적용 */
+        padding-bottom: 10px;
     }
 
     .logo {
