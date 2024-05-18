@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기</title>
+</head>
+<body>
+    <h1>문의하기</h1>
+    <form id="contactForm">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">메시지:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <input type="submit" value="제출">
+    </form>
+
+    <!-- Firebase SDKs -->
+    
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCXqd76-zyuGaoiSlPRTRyOFOexFNSEvzU",
+            authDomain: "tiktok-make-a-thone.firebaseapp.com",
+            databaseURL: "https://tiktok-make-a-thone-default-rtdb.firebaseio.com/",
+            projectId: "tiktok-make-a-thone",
+            storageBucket: "tiktok-make-a-thone.appspot.com",
+            messagingSenderId: "115792141686",
+            appId: "1:115792141686:web:769093b032edc8fe3fae57",
+            measurementId: "G-HWK7WPT42N"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // 문의사항 제출 처리
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Firebase Realtime Database에 데이터 저장
+            const newMessageRef = database.ref('messages').push();
+            newMessageRef.set({
+                name: name,
+                email: email,
+                message: message
+            }).then(() => {
+                alert('문의사항이 성공적으로 제출되었습니다.');
+                contactForm.reset();
+                // 제출 후 Home 페이지로 이동
+                window.location.href = 'index.html';
+            }).catch((error) => {
+                console.error('Error submitting contact form: ', error);
+                alert('문의사항 제출 중 오류가 발생했습니다.');
+            });
+        });
+    </script>
+</body>
+</html>

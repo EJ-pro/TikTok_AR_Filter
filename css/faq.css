@@ -1,9 +1,21 @@
 /* faq.css */
-/* 필요에 따라 FAQ 페이지의 스타일 추가 */
-main {
+#faq {
     padding: 20px;
 }
 
-#faq {
-    text-align: center;
+#inquireButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff0050;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#inquireButton:hover {
+    background-color: #e60045;
 }
