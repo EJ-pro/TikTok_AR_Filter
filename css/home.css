@@ -12,10 +12,8 @@ main {
 }
 
 .image-container {
-    width: 100%; /* 이미지 컨테이너의 너비를 60%로 설정하여 페이지의 60% 안에 들어가도록 함 */
+    width: 60%; /* 이미지 컨테이너의 너비를 60%로 설정하여 페이지의 60% 안에 들어가도록 함 */
     margin-bottom: 20px; /* 이미지 사이에 간격을 줌 */
-    align-items: center;
-    text-align: center;
 }
 
 .images img {
@@ -30,23 +28,12 @@ main {
 .images img.width-100 {
     width: 100%;
 }
+.images img.width-60 {
+    width: 60%;
+}
 
 .content {
     width: 60%;
-    margin: 0;
+    margin: auto;
     align-items: center;
-    text-align: center;
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .images img.width-80,
-    .images img.width-100 {
-        width: 100%;
-    }
-
-    .content {
-        width: 100%;
-        padding: 0 10px;
-    }
 }
