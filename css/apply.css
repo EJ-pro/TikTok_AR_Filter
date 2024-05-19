@@ -1,9 +1,76 @@
 /* apply.css */
-/* 필요에 따라 APPLY 페이지의 스타일 추가 */
+
+/* main 요소의 배경색 설정 */
 main {
-    padding: 20px;
+    background-color: #000;
 }
 
-#apply {
-    text-align: center;
+/* 이미지 섹션의 스타일 설정 */
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 이미지 너비 조정 클래스 */
+.images img.width-85 {
+    width: 85%;
+    margin-top: -50px; /* 이미지가 조금 위로 올라가도록 설정 */
+}
+
+.images img.width-100 {
+    width: 100%;
+}
+
+/* 모든 이미지 숨기기 설정 */
+.pc-only,
+.mobile-only,
+.tab-only {
+    display: none;
+}
+
+/* 대형 화면에 PC 이미지 표시 */
+@media (min-width: 1025px) {
+    .pc-only {
+        display: block;
+    }
+}
+
+/* 중형 화면에 태블릿 이미지 표시 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tab-only {
+        display: block;
+    }
+}
+
+/* 작은 화면에 모바일 이미지 표시 */
+@media (max-width: 767px) {
+    .mobile-only {
+        display: block;
+    }
+}
+
+/* 이미지 버튼 스타일 설정 */
+.image-buttons {
+    display: flex;
+    width: 100%; /* 부모 요소에 맞게 가로폭 조정 */
+    margin-top: 20px; /* 위 여백 추가 */
+}
+
+.image-button {
+    background-color: #000; /* 배경색 검정으로 설정 */
+    border: none; /* 테두리 없애기 */
+    cursor: pointer; /* 커서를 포인터로 설정하여 클릭 가능한 상태로 변경 */
+    transition: background-color 0.3s; /* 배경색 변경 시 부드러운 전환 효과 추가 */
+}
+
+.image-button img {
+    display: block;
+    width: 177px;
+    height: 69px;
+}
+
+/* 버튼에 호버 효과 추가 */
+.image-button:hover {
+    background-color: #333; /* 호버 시 약간 어둡게 변경된 검은색 배경 */
 }
