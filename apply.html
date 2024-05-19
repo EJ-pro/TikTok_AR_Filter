@@ -28,9 +28,9 @@
 
             <!-- 웹 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons pc-only">
-                <button class="toggle-button web-size" onclick="toggleSelected(this)">서울</button>
-                <button class="toggle-button web-size" onclick="toggleSelected(this)">대전</button>
-                <button class="toggle-button web-size" onclick="toggleSelected(this)">광주</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1nCTw4xQaW7Z3svAMFR5m3ek54dQHR2aktn5GI25tJsk/edit?usp=forms_home&ths=true')">서울</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1_wNZfRHhcUVeJB_YLILwJ1q5lPlHftNmvqRysw56SB4/edit')">대전</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/17Y29gQ994vg0S50TSKkgKWuG1PVoKNQv3-5e1B1Rp4c/edit')">광주</button>
             </div>
 
             <div class="radio-buttons pc-only">
@@ -42,9 +42,9 @@
 
             <!-- 모바일 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons mobile-only">
-                <button class="toggle-button mobile-size" onclick="toggleSelected(this)">서울</button>
-                <button class="toggle-button mobile-size" onclick="toggleSelected(this)">대전</button>
-                <button class="toggle-button mobile-size" onclick="toggleSelected(this)">광주</button>
+                <button class="toggle-button mobile-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1nCTw4xQaW7Z3svAMFR5m3ek54dQHR2aktn5GI25tJsk/edit?usp=forms_home&ths=true')">서울</button>
+                <button class="toggle-button mobile-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1_wNZfRHhcUVeJB_YLILwJ1q5lPlHftNmvqRysw56SB4/edit')">대전</button>
+                <button class="toggle-button mobile-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/17Y29gQ994vg0S50TSKkgKWuG1PVoKNQv3-5e1B1Rp4c/edit')">광주</button>
             </div>
 
             <div class="radio-buttons mobile-only">
@@ -56,9 +56,9 @@
 
             <!-- 태블릿 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons tab-only">
-                <button class="toggle-button tab-size" onclick="toggleSelected(this)">서울</button>
-                <button class="toggle-button tab-size" onclick="toggleSelected(this)">대전</button>
-                <button class="toggle-button tab-size" onclick="toggleSelected(this)">광주</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1nCTw4xQaW7Z3svAMFR5m3ek54dQHR2aktn5GI25tJsk/edit?usp=forms_home&ths=true')">서울</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1_wNZfRHhcUVeJB_YLILwJ1q5lPlHftNmvqRysw56SB4/edit')">대전</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/17Y29gQ994vg0S50TSKkgKWuG1PVoKNQv3-5e1B1Rp4c/edit')">광주</button>
             </div>
 
             <div class="radio-buttons tab-only">
@@ -72,24 +72,27 @@
             <img src="image/Apply/Tab_image_image2.png" alt="Tab apply image 2" class="width-100 tab-only">
             <img src="image/Apply/Mobile_image_image2.png" alt="Mobile apply image 2" class="width-100 mobile-only">
 
-            <a href="apply.html">
-                <img id="apply-button-pc" src="image/Apply/Tab_btn.png" alt="PC Apply Button" class="pc-only" style="width: 256px; height: 66px; margin-bottom: 122px;">
+            <a id="apply-link-pc" href="apply.html" onclick="return false;">
+                <img id="apply-button-pc" src="image/Apply/Tab_btn.png" alt="PC Apply Button" class="pc-only disabled" style="width: 256px; height: 66px; margin-bottom: 122px;">
             </a>
-            <a href="apply.html">
-                <img id="apply-button-tab" src="image/Apply/Tab_btn.png" alt="Tab Apply Button" class="tab-only" style="width: 256px; height: 70px; margin-bottom: 271px;">
+            <a id="apply-link-tab" href="apply.html" onclick="return false;">
+                <img id="apply-button-tab" src="image/Apply/Tab_btn.png" alt="Tab Apply Button" class="tab-only disabled" style="width: 256px; height: 70px; margin-bottom: 271px;">
             </a>
-            <a href="apply.html">
-                <img id="apply-button-mobile" src="image/Apply/Mobile_btn.png" alt="Mobile Apply Button" class="mobile-only" style="width: 260px; height: 65px; margin-bottom: 119px;">
+            <a id="apply-link-mobile" href="apply.html" onclick="return false;">
+                <img id="apply-button-mobile" src="image/Apply/Mobile_btn.png" alt="Mobile Apply Button" class="mobile-only disabled" style="width: 260px; height: 65px; margin-bottom: 119px;">
             </a>
         </section>
 
         <script>
-            function toggleSelected(button) {
+            var selectedLocation = '';
+
+            function toggleSelected(button, location) {
                 var buttons = document.querySelectorAll('.toggle-button');
                 buttons.forEach(function (btn) {
                     btn.classList.remove('selected');
                 });
                 button.classList.add('selected');
+                selectedLocation = location;
                 checkAllSelected();
             }
 
@@ -106,14 +109,48 @@
                 var selectedToggle = document.querySelector('.toggle-button.selected');
                 var selectedRadio = document.querySelector('.radio-button.selected');
 
+                var applyLinkPC = document.getElementById('apply-link-pc');
+                var applyLinkTab = document.getElementById('apply-link-tab');
+                var applyLinkMobile = document.getElementById('apply-link-mobile');
+
+                var applyButtonPC = document.getElementById('apply-button-pc');
+                var applyButtonTab = document.getElementById('apply-button-tab');
+                var applyButtonMobile = document.getElementById('apply-button-mobile');
+
                 if (selectedToggle && selectedRadio) {
-                    document.getElementById('apply-button-pc').src = 'image/Apply/Mobile_btn_check.png';
-                    document.getElementById('apply-button-tab').src = 'image/Apply/Mobile_btn_check.png';
-                    document.getElementById('apply-button-mobile').src = 'image/Apply/Mobile_btn_check.png';
+                    applyButtonPC.src = 'image/Apply/Mobile_btn_check.png';
+                    applyButtonTab.src = 'image/Apply/Mobile_btn_check.png';
+                    applyButtonMobile.src = 'image/Apply/Mobile_btn_check.png';
+
+                    applyButtonPC.classList.remove('disabled');
+                    applyButtonTab.classList.remove('disabled');
+                    applyButtonMobile.classList.remove('disabled');
+
+                    var newUrl = `https://${selectedLocation}`;
+
+                    applyLinkPC.href = newUrl;
+                    applyLinkTab.href = newUrl;
+                    applyLinkMobile.href = newUrl;
+
+                    applyLinkPC.onclick = null;
+                    applyLinkTab.onclick = null;
+                    applyLinkMobile.onclick = null;
                 } else {
-                    document.getElementById('apply-button-pc').src = 'image/Apply/Tab_btn.png';
-                    document.getElementById('apply-button-tab').src = 'image/Apply/Tab_btn.png';
-                    document.getElementById('apply-button-mobile').src = 'image/Apply/Mobile_btn.png';
+                    applyButtonPC.src = 'image/Apply/Tab_btn.png';
+                    applyButtonTab.src = 'image/Apply/Tab_btn.png';
+                    applyButtonMobile.src = 'image/Apply/Mobile_btn.png';
+
+                    applyButtonPC.classList.add('disabled');
+                    applyButtonTab.classList.add('disabled');
+                    applyButtonMobile.classList.add('disabled');
+
+                    applyLinkPC.href = "apply.html";
+                    applyLinkTab.href = "apply.html";
+                    applyLinkMobile.href = "apply.html";
+
+                    applyLinkPC.onclick = function() { return false; };
+                    applyLinkTab.onclick = function() { return false; };
+                    applyLinkMobile.onclick = function() { return false; };
                 }
             }
         </script>
