@@ -86,7 +86,6 @@ main {
 
     nav ul li {
         margin-right: 15px; /* 우측 여백 제거 */
-        margin-bottom: 10px; /* 메뉴 아이템 간의 여백 추가 */
     }
 
     nav ul li:last-child {
