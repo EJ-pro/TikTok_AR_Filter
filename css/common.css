@@ -71,12 +71,11 @@ main {
     header {
         align-items: center;
         padding-top: 10px; /* 반응형에서 헤더 전체에 패딩 적용 */
-        padding-bottom: 10px;
+        padding-bottom: 3px;
     }
 
     .logo {
         width: 120px; /* 로고 크기 조정 */
-        margin-bottom: 10px; /* 로고와 네비게이션 사이 여백 추가 */
         margin-left: 5px;
     }
 
