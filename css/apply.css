@@ -141,3 +141,7 @@ main {
     height: 55px;
     font-size: 22px;
 }
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
