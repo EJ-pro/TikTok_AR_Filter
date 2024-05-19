@@ -7,17 +7,17 @@ body {
 }
 
 .faq-item {
-    width: 80%;
+    width: 58%;
     margin: auto;
     border-bottom: 1px solid #959;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 23px;
-    font-weight: bold;
+    padding-top: 31.5px;
+    padding-bottom: 31.5px;
 }
 
 .faq-question {
     cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
     background-color: #000;
     transition: background-color 0.3s ease;
 }
@@ -29,6 +29,8 @@ body {
 .faq-answer {
     display: none;
     background-color: #000;
+    margin-bottom: 22.5px;
+    margin-left: 28.5px;
     font-size: 18px; /* 변경된 폰트 크기 */
     color: #25F4EE; /* 변경된 폰트 색상 */
 }
@@ -47,13 +49,6 @@ body {
 
 .images img.width-100 {
     width: 100%;
-}
-
-/* 모든 이미지 숨기기 설정 */
-.pc-only,
-.mobile-only,
-.tab-only {
-    display: none;
 }
 
 /* 대형 화면에 PC 이미지 표시 */
@@ -82,6 +77,36 @@ body {
         display: block;
     }
     .pc-only, .tab-only {
+        display: none;
+    }
+}
+
+/* 대형 화면에서만 PC 버튼 표시 */
+@media (min-width: 1025px) {
+    #faq-link-pc {
+        display: block;
+    }
+    #faq-link-tab, #faq-link-mobile {
+        display: none;
+    }
+}
+
+/* 중형 화면에서만 탭 버튼 표시 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #faq-link-tab {
+        display: block;
+    }
+    #faq-link-pc, #faq-link-mobile {
+        display: none;
+    }
+}
+
+/* 작은 화면에서만 모바일 버튼 표시 */
+@media (max-width: 767px) {
+    #faq-link-mobile {
+        display: block;
+    }
+    #faq-link-pc, #faq-link-tab {
         display: none;
     }
 }
