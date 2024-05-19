@@ -34,11 +34,9 @@
             </div>
 
             <div class="radio-buttons pc-only">
-                <input type="radio" name="participation" id="team" class="radio-button web-size"
-                    onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="team" class="radio-button web-size" onclick="toggleSelectedRadio(this)">
                 <label for="team" class="radio-label web-size">팀 참가</label>
-                <input type="radio" name="participation" id="individual" class="radio-button web-size"
-                    onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="individual" class="radio-button web-size" onclick="toggleSelectedRadio(this)">
                 <label for="individual" class="radio-label web-size">개인 참가</label>
             </div>
 
@@ -50,11 +48,9 @@
             </div>
 
             <div class="radio-buttons mobile-only">
-                <input type="radio" name="participation" id="team-mobile" class="radio-button mobile-size"
-                    onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="team-mobile" class="radio-button mobile-size" onclick="toggleSelectedRadio(this)">
                 <label for="team-mobile" class="radio-label mobile-size">팀 참가</label>
-                <input type="radio" name="participation" id="individual-mobile" class="radio-button mobile-size"
-                    onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="individual-mobile" class="radio-button mobile-size" onclick="toggleSelectedRadio(this)">
                 <label for="individual-mobile" class="radio-label mobile-size">개인 참가</label>
             </div>
 
@@ -66,11 +62,9 @@
             </div>
 
             <div class="radio-buttons tab-only">
-                <input type="radio" name="participation" id="team-tab" class="radio-button tab-size"
-                    onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="team-tab" class="radio-button tab-size" onclick="toggleSelectedRadio(this)">
                 <label for="team-tab" class="radio-label tab-size">팀 참가</label>
-                <input type="radio" name="participation" id="individual-tab" class="radio-button tab-size"
-                    onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="individual-tab" class="radio-button tab-size" onclick="toggleSelectedRadio(this)">
                 <label for="individual-tab" class="radio-label tab-size">개인 참가</label>
             </div>
 
@@ -79,18 +73,14 @@
             <img src="image/Apply/Mobile_image_image2.png" alt="Mobile apply image 2" class="width-100 mobile-only">
 
             <a href="apply.html">
-                <img src="image/Home/Home_image_btn.png" alt="Apply Button" class="pc-only"
-                    style="width: 256px; height: 66px;">
+                <img id="apply-button-pc" src="image/Apply/Tab_btn.png" alt="PC Apply Button" class="pc-only" style="width: 256px; height: 66px; margin-bottom: 122px;">
             </a>
             <a href="apply.html">
-                <img src="image/Apply/Tab_btn.png" alt="Apply Button" class="tab-only"
-                    style="width: 256px; height: 70px; margin-bottom: 271px;">
+                <img id="apply-button-tab" src="image/Apply/Tab_btn.png" alt="Tab Apply Button" class="tab-only" style="width: 256px; height: 70px; margin-bottom: 271px;">
             </a>
             <a href="apply.html">
-                <img src="image/Apply/Mobile_btn.png" alt="Apply Button" class="mobile-only"
-                    style="width: 260px; height: 65px; margin-bottom: 119px;">
+                <img id="apply-button-mobile" src="image/Apply/Mobile_btn.png" alt="Mobile Apply Button" class="mobile-only" style="width: 260px; height: 65px; margin-bottom: 119px;">
             </a>
-            <img src="image/Home/PC_Home_9.png" alt="apply image 3" class="width-100 pc-only">
         </section>
 
         <script>
@@ -100,6 +90,7 @@
                     btn.classList.remove('selected');
                 });
                 button.classList.add('selected');
+                checkAllSelected();
             }
 
             function toggleSelectedRadio(button) {
@@ -108,6 +99,22 @@
                     btn.classList.remove('selected');
                 });
                 button.classList.add('selected');
+                checkAllSelected();
+            }
+
+            function checkAllSelected() {
+                var selectedToggle = document.querySelector('.toggle-button.selected');
+                var selectedRadio = document.querySelector('.radio-button.selected');
+
+                if (selectedToggle && selectedRadio) {
+                    document.getElementById('apply-button-pc').src = 'image/Apply/Mobile_btn_check.png';
+                    document.getElementById('apply-button-tab').src = 'image/Apply/Mobile_btn_check.png';
+                    document.getElementById('apply-button-mobile').src = 'image/Apply/Mobile_btn_check.png';
+                } else {
+                    document.getElementById('apply-button-pc').src = 'image/Apply/Tab_btn.png';
+                    document.getElementById('apply-button-tab').src = 'image/Apply/Tab_btn.png';
+                    document.getElementById('apply-button-mobile').src = 'image/Apply/Mobile_btn.png';
+                }
             }
         </script>
     </main>
