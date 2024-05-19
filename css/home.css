@@ -1,6 +1,5 @@
 /* home.css */
 main {
-    padding: 20px 0;
     background-color: #000;
 }
 
@@ -8,47 +7,42 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.image-container {
-    width: 60%; /* 이미지 컨테이너의 너비를 60%로 설정하여 페이지의 60% 안에 들어가도록 함 */
-    margin-bottom: 20px; /* 이미지 사이에 간격을 줌 */
-}
-
-.images img {
-    margin-bottom: 20px;
 }
 
 /* 이미지 너비 옵션 */
-.images img.width-80 {
-    width: 80%;
+.images img.width-85 {
+    width: 85%;
+    margin-top: -50px;
 }
 
 .images img.width-100 {
     width: 100%;
 }
-.images img.width-60 {
-    width: 60%;
+
+/* Default to hide all images */
+.pc-only,
+.mobile-only,
+.tab-only {
+    display: none;
 }
 
-.content {
-    width: 60%;
-    margin: auto;
-    align-items: center;
+/* Show PC images for larger screens */
+@media (min-width: 1025px) {
+    .pc-only {
+        display: block;
+    }
 }
 
-@media (max-width: 768px) {
-    .image-container {
-        width: 100%; /* 모바일에서 이미지 컨테이너의 너비를 100%로 설정 */
+/* Show Tablet images for medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tab-only {
+        display: block;
     }
-    
-    .images img.width-60 {
-        width: 100%; /* 모바일에서 width-60 이미지를 100%로 설정 */
-    }
+}
 
-    .content {
-        width: 100%; /* 모바일에서 content의 너비를 100%로 설정 */
-        padding: 0 10px; /* 좌우 여백 추가 */
+/* Show Mobile images for smaller screens */
+@media (max-width: 767px) {
+    .mobile-only {
+        display: block;
     }
 }

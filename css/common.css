@@ -62,7 +62,9 @@ nav ul li a:hover {
 .current-page {
     color: #25F4EE !important;
 }
-
+main {
+    margin-top: 60px; /* 헤더 높이만큼 마진 추가 */
+}
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     header {
