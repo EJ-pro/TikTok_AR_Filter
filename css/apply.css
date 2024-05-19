@@ -15,7 +15,6 @@ main {
 /* 이미지 너비 조정 클래스 */
 .images img.width-85 {
     width: 85%;
-    margin-top: -50px; /* 이미지가 조금 위로 올라가도록 설정 */
 }
 
 .images img.width-100 {
@@ -73,4 +72,72 @@ main {
 /* 버튼에 호버 효과 추가 */
 .image-button:hover {
     background-color: #333; /* 호버 시 약간 어둡게 변경된 검은색 배경 */
+}
+
+/* 토글 버튼 스타일 설정 */
+.toggle-button {
+    width: 177px;
+    height: 69px;
+    border: 2px solid #FE2C55;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 24px; /* 버튼 사이 간격 조정 */
+    margin-bottom: 75px; /* 버튼 사이 간격 조정 */
+    border-radius: 10px; /* 라운드 적용 */
+    display: inline-block; /* 가로 배치를 위해 인라인 블록 요소로 변경 */
+}
+
+.toggle-button.selected {
+    background-color: #FE2C55;
+    color: white;
+}
+
+
+[type="radio"] {
+    accent-color: red;
+  }
+
+.radio-label {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+/* 모바일에서 토글 및 라디오 버튼 크기 설정 */
+.toggle-button.mobile-size{
+    margin-bottom: 58px; /* 버튼 사이 간격 조정 */
+    margin: 6.5px; /* 버튼 사이 간격 조정 */
+    width: 95px;
+    height: 35px;
+    font-size: 16px;
+}
+.radio-button.mobile-size{
+    width: 13px;
+    margin-top: 58px; /* 버튼 사이 간격 조정 */
+    height: 13px;
+}
+.radio-label.mobile-size {
+    width: 12px;
+    height: 17.5px;
+    font-size: 12px;
+}
+
+/* 태블릿에서 토글 및 라디오 버튼 크기 설정 */
+.toggle-button.tab-size{    
+    margin: 20px; /* 버튼 사이 간격 조정 */
+    width: 152px;
+    height: 59px;
+    font-size: 22px;
+}
+.radio-button.tab-size{
+    margin-top: 48px; /* 버튼 사이 간격 조정 */
+    width: 17px;
+    height: 17px;
+}
+.radio-label.tab-size {
+    width: 152px;
+    height: 55px;
+    font-size: 22px;
 }

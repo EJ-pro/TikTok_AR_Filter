@@ -22,15 +22,94 @@
     </header>
     <main>
         <section class="images">
-            <img src="image/Apply/apply_image_1.png" alt="apply image 1" class="width-100 pc-only">
-            <!-- 여기에 3개의 버튼이 가로로 있고 이미지 버튼으로 구성되어있어-->
-            <img src="image/Apply/apply_image_2.png" alt="apply image 2" class="width-100 pc-only">
+            <img src="image/Apply/PC_apply_image_1.png" alt="apply image 1" class="width-100 pc-only">
+            <img src="image/Apply/Tab_apply_image1.png" alt="apply image 1" class="width-100 tab-only">
+            <img src="image/Apply/Mobile_apply_image1.png" alt="apply image 1" class="width-100 mobile-only">
+
+            <!-- 웹 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
+            <div class="toggle-buttons pc-only">
+                <button class="toggle-button web-size" onclick="toggleSelected(this)">서울</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this)">대전</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this)">광주</button>
+            </div>
+
+            <div class="radio-buttons pc-only">
+                <input type="radio" name="participation" id="team" class="radio-button web-size"
+                    onclick="toggleSelectedRadio(this)">
+                <label for="team" class="radio-label web-size">팀 참가</label>
+                <input type="radio" name="participation" id="individual" class="radio-button web-size"
+                    onclick="toggleSelectedRadio(this)">
+                <label for="individual" class="radio-label web-size">개인 참가</label>
+            </div>
+
+            <!-- 모바일 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
+            <div class="toggle-buttons mobile-only">
+                <button class="toggle-button mobile-size" onclick="toggleSelected(this)">서울</button>
+                <button class="toggle-button mobile-size" onclick="toggleSelected(this)">대전</button>
+                <button class="toggle-button mobile-size" onclick="toggleSelected(this)">광주</button>
+            </div>
+
+            <div class="radio-buttons mobile-only">
+                <input type="radio" name="participation" id="team-mobile" class="radio-button mobile-size"
+                    onclick="toggleSelectedRadio(this)">
+                <label for="team-mobile" class="radio-label mobile-size">팀 참가</label>
+                <input type="radio" name="participation" id="individual-mobile" class="radio-button mobile-size"
+                    onclick="toggleSelectedRadio(this)">
+                <label for="individual-mobile" class="radio-label mobile-size">개인 참가</label>
+            </div>
+
+            <!-- 태블릿 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
+            <div class="toggle-buttons tab-only">
+                <button class="toggle-button tab-size" onclick="toggleSelected(this)">서울</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this)">대전</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this)">광주</button>
+            </div>
+
+            <div class="radio-buttons tab-only">
+                <input type="radio" name="participation" id="team-tab" class="radio-button tab-size"
+                    onclick="toggleSelectedRadio(this)">
+                <label for="team-tab" class="radio-label tab-size">팀 참가</label>
+                <input type="radio" name="participation" id="individual-tab" class="radio-button tab-size"
+                    onclick="toggleSelectedRadio(this)">
+                <label for="individual-tab" class="radio-label tab-size">개인 참가</label>
+            </div>
+
+            <img src="image/Apply/PC_apply_image2.png" alt="apply image 2" class="width-100 pc-only">
+            <img src="image/Apply/Tab_image_image2.png" alt="Tab apply image 2" class="width-100 tab-only">
+            <img src="image/Apply/Mobile_image_image2.png" alt="Mobile apply image 2" class="width-100 mobile-only">
+
             <a href="apply.html">
                 <img src="image/Home/Home_image_btn.png" alt="Apply Button" class="pc-only"
                     style="width: 256px; height: 66px;">
             </a>
+            <a href="apply.html">
+                <img src="image/Apply/Tab_btn.png" alt="Apply Button" class="tab-only"
+                    style="width: 256px; height: 66px; margin-bottom: 271px;">
+            </a>
+            <a href="apply.html">
+                <img src="image/Apply/Mobile_btn.png" alt="Apply Button" class="mobile-only"
+                    style="width: 256px; height: 66px; margin-bottom: 119px;">
+            </a>
             <img src="image/Home/PC_Home_9.png" alt="apply image 3" class="width-100 pc-only">
         </section>
+
+        <script>
+            function toggleSelected(button) {
+                var buttons = document.querySelectorAll('.toggle-button');
+                buttons.forEach(function (btn) {
+                    btn.classList.remove('selected');
+                });
+                button.classList.add('selected');
+            }
+
+            function toggleSelectedRadio(button) {
+                var buttons = document.querySelectorAll('.radio-button');
+                buttons.forEach(function (btn) {
+                    btn.classList.remove('selected');
+                });
+                button.classList.add('selected');
+            }
+        </script>
     </main>
     <script src="js/header-slide.js"></script>
 </body>
