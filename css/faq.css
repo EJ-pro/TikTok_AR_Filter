@@ -1,21 +1,87 @@
-/* faq.css */
-#faq {
-    padding: 20px;
+body {
+    font-family: Arial, sans-serif;
 }
 
-#inquireButton {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff0050;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.faq-container {
+    width: 100%;
+}
+
+.faq-item {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid #959;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.faq-question {
     cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #000;
+    transition: background-color 0.3s ease;
 }
 
-#inquireButton:hover {
-    background-color: #e60045;
+.faq-question:hover {
+    background-color: #000;
+}
+
+.faq-answer {
+    display: none;
+    background-color: #000;
+    font-size: 18px; /* 변경된 폰트 크기 */
+    color: #25F4EE; /* 변경된 폰트 색상 */
+}
+
+/* 이미지 섹션의 스타일 설정 */
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 이미지 너비 조정 클래스 */
+.images img.width-85 {
+    width: 85%;
+}
+
+.images img.width-100 {
+    width: 100%;
+}
+
+/* 모든 이미지 숨기기 설정 */
+.pc-only,
+.mobile-only,
+.tab-only {
+    display: none;
+}
+
+/* 대형 화면에 PC 이미지 표시 */
+@media (min-width: 1025px) {
+    .pc-only {
+        display: block;
+    }
+    .tab-only, .mobile-only {
+        display: none;
+    }
+}
+
+/* 중형 화면에 태블릿 이미지 표시 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tab-only {
+        display: block;
+    }
+    .pc-only, .mobile-only {
+        display: none;
+    }
+}
+
+/* 작은 화면에 모바일 이미지 표시 */
+@media (max-width: 767px) {
+    .mobile-only {
+        display: block;
+    }
+    .pc-only, .tab-only {
+        display: none;
+    }
 }
