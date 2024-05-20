@@ -23,7 +23,11 @@ body {
     background: linear-gradient(to right, #FE2C55 0%, #8998A8 54%, #25F4EE 100%);
 }
 .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
+    margin-right: 32px;
     font-size: 23px;
     font-weight: bold;
     background-color: #000;
@@ -129,6 +133,7 @@ body {
 
     .faq-question {
         font-size: 20px;
+        margin-right: 6px;
     }
 
     .faq-answer {
@@ -149,6 +154,7 @@ body {
 
     .faq-question {
         font-size: 19px;
+        margin-right: 20px;
     }
 
     .faq-answer {
