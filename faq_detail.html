@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>틱톡 대학생 AR 메이커톤</title>
     <link rel="icon" href="image/TikTok_Circle.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/faq_detail.css">
 </head>
 <body>
     <h1>문의하기</h1>
     <main>
         <section class="images">
-            <img src="images/PC_faq_dtail_image1.jpg" alt="PC FAQ Detail Image 1" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image1.jpg" alt="Tab FAQ Detail Image 1" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image1.jpg" alt="Mobile FAQ Detail Image 1" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image1.png" alt="PC FAQ Detail Image 1" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image1.png" alt="Tab FAQ Detail Image 1" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image1.png" alt="Mobile FAQ Detail Image 1" class="width-100 mobile-only">
 
             <div class="form-section pc-only">
-                <input type="text" id="name-pc" name="name" placeholder="문의자 명을 입력해주세요" required>
+                <input type="text" id="name-pc" name="name" placeholder="문의자 명을 입력해주세요" required  style="width: 720px; height: 70px;">
             </div>
             <div class="form-section tab-only">
                 <input type="text" id="name-tab" name="name" placeholder="문의자 명을 입력해주세요" required>
@@ -25,9 +25,9 @@
                 <input type="text" id="name-mobile" name="name" placeholder="문의자 명을 입력해주세요" required>
             </div>
 
-            <img src="images/PC_faq_dtail_image2.jpg" alt="FAQ Detail Image 2" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image2.jpg" alt="FAQ Detail Image 2" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image2.jpg" alt="FAQ Detail Image 2" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image2.png" alt="FAQ Detail Image 2" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image2.png" alt="FAQ Detail Image 2" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image2.png" alt="FAQ Detail Image 2" class="width-100 mobile-only">
 
             <div class="form-section pc-only phone-input">
                 <input type="text" id="phone-part1-pc" maxlength="3" placeholder="010" required>
@@ -45,13 +45,15 @@
                 <input type="text" id="phone-part3-mobile" maxlength="4" placeholder="1234" required>
             </div>
 
-            <img src="images/PC_faq_dtail_image3.jpg" alt="FAQ Detail Image 3" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image3.jpg" alt="FAQ Detail Image 3" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image3.jpg" alt="FAQ Detail Image 3" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image3.png" alt="FAQ Detail Image 3" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image3.png" alt="FAQ Detail Image 3" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image3.png" alt="FAQ Detail Image 3" class="width-100 mobile-only">
 
             <div class="form-section pc-only email-input">
                 <input type="text" id="email-prefix-pc" placeholder="메일 앞 주소" required>
-                <select id="email-domain-pc" required>
+                <span>@</span>
+                <input type="text" id="email-domain-pc" placeholder="도메인" required>
+                <select id="email-select-pc">
                     <option value="">직접입력</option>
                     <option value="naver.com">naver.com</option>
                     <option value="gmail.com">gmail.com</option>
@@ -59,7 +61,9 @@
             </div>
             <div class="form-section tab-only email-input">
                 <input type="text" id="email-prefix-tab" placeholder="메일 앞 주소" required>
-                <select id="email-domain-tab" required>
+                <span>@</span>
+                <input type="text" id="email-domain-tab" placeholder="도메인" required>
+                <select id="email-select-tab">
                     <option value="">직접입력</option>
                     <option value="naver.com">naver.com</option>
                     <option value="gmail.com">gmail.com</option>
@@ -67,16 +71,18 @@
             </div>
             <div class="form-section mobile-only email-input">
                 <input type="text" id="email-prefix-mobile" placeholder="메일 앞 주소" required>
-                <select id="email-domain-mobile" required>
+                <span>@</span>
+                <input type="text" id="email-domain-mobile" placeholder="도메인" required>
+                <select id="email-select-mobile">
                     <option value="">직접입력</option>
                     <option value="naver.com">naver.com</option>
                     <option value="gmail.com">gmail.com</option>
                 </select>
             </div>
 
-            <img src="images/PC_faq_dtail_image4.jpg" alt="FAQ Detail Image 4" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image4.jpg" alt="FAQ Detail Image 4" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image4.jpg" alt="FAQ Detail Image 4" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image4.png" alt="FAQ Detail Image 4" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image4.png" alt="FAQ Detail Image 4" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image4.png" alt="FAQ Detail Image 4" class="width-100 mobile-only">
 
             <div class="form-section pc-only">
                 <input type="text" id="subject-pc" name="subject" placeholder="제목을 입력해주세요" required>
@@ -88,9 +94,9 @@
                 <input type="text" id="subject-mobile" name="subject" placeholder="제목을 입력해주세요" required>
             </div>
 
-            <img src="images/PC_faq_dtail_image5.jpg" alt="FAQ Detail Image 5" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image5.jpg" alt="FAQ Detail Image 5" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image5.jpg" alt="FAQ Detail Image 5" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image5.png" alt="FAQ Detail Image 5" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image5.png" alt="FAQ Detail Image 5" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image5.png" alt="FAQ Detail Image 5" class="width-100 mobile-only">
 
             <div class="form-section pc-only">
                 <textarea id="message-pc" name="message" placeholder="문의 내용을 입력해주세요" required></textarea>
@@ -102,9 +108,9 @@
                 <textarea id="message-mobile" name="message" placeholder="문의 내용을 입력해주세요" required></textarea>
             </div>
 
-            <img src="images/PC_faq_dtail_image6.jpg" alt="FAQ Detail Image 6" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image6.jpg" alt="FAQ Detail Image 6" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image6.jpg" alt="FAQ Detail Image 6" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image6.png" alt="FAQ Detail Image 6" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image6.png" alt="FAQ Detail Image 6" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image6.png" alt="FAQ Detail Image 6" class="width-100 mobile-only">
 
             <div class="form-section pc-only">
                 <input type="file" id="file-pc" name="file">
@@ -116,9 +122,9 @@
                 <input type="file" id="file-mobile" name="file">
             </div>
 
-            <img src="images/PC_faq_dtail_image7.jpg" alt="FAQ Detail Image 7" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image7.jpg" alt="FAQ Detail Image 7" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image7.jpg" alt="FAQ Detail Image 7" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image7.png" alt="FAQ Detail Image 7" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image7.png" alt="FAQ Detail Image 7" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image7.png" alt="FAQ Detail Image 7" class="width-100 mobile-only">
 
             <div class="form-section pc-only privacy-policy">
                 <p>개인정보 처리방침 내용이 여기에 들어갑니다...</p>
@@ -140,9 +146,9 @@
                 <label><input type="checkbox" id="agree-mobile" name="agree" required> 개인정보 수집 및 이용에 대해서 동의합니다</label>
             </div>
 
-            <img src="images/PC_faq_dtail_image8.jpg" alt="FAQ Detail Image 8" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image8.jpg" alt="FAQ Detail Image 8" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image8.jpg" alt="FAQ Detail Image 8" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image8.png" alt="FAQ Detail Image 8" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image8.png" alt="FAQ Detail Image 8" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image8.png" alt="FAQ Detail Image 8" class="width-100 mobile-only">
 
             <div class="form-section pc-only">
                 <button type="submit" id="submit-pc" class="submit-button disabled">전송</button>
@@ -154,32 +160,38 @@
                 <button type="submit" id="submit-mobile" class="submit-button disabled">전송</button>
             </div>
 
-            <img src="images/PC_faq_dtail_image9.jpg" alt="FAQ Detail Image 9" class="width-100 pc-only">
-            <img src="images/Tab_faq_dtail_image9.jpg" alt="FAQ Detail Image 9" class="width-100 tab-only">
-            <img src="images/Mobile_faq_dtail_image9.jpg" alt="FAQ Detail Image 9" class="width-100 mobile-only">
+            <img src="image/faq_detail/PC_faq_detail_image9.png" alt="FAQ Detail Image 9" class="width-100 pc-only">
+            <img src="image/faq_detail/Tab_faq_detail_image9.png" alt="FAQ Detail Image 9" class="width-100 tab-only">
+            <img src="image/faq_detail/Mobile_faq_detail_image9.png" alt="FAQ Detail Image 9" class="width-100 mobile-only">
         </section>
     </main>
 
-    <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
     <script>
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyCXqd76-zyuGaoiSlPRTRyOFOexFNSEvzU",
-            authDomain: "tiktok-make-a-thone.firebaseapp.com",
-            projectId: "tiktok-make-a-thone",
-            storageBucket: "tiktok-make-a-thone.appspot.com",
-            messagingSenderId: "115792141686",
-            appId: "1:115792141686:web:769093b032edc8fe3fae57",
-            measurementId: "G-HWK7WPT42N"
-        };
+        // Firebase configuration and initialization code here...
 
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+        // 이메일 도메인 자동 채우기 기능
+        function setupEmailDomain(selectId, domainInputId) {
+            const emailSelect = document.getElementById(selectId);
+            const emailDomainInput = document.getElementById(domainInputId);
+
+            emailSelect.addEventListener('change', () => {
+                if (emailSelect.value) {
+                    emailDomainInput.value = emailSelect.value;
+                    emailDomainInput.setAttribute('readonly', 'readonly');
+                } else {
+                    emailDomainInput.value = '';
+                    emailDomainInput.removeAttribute('readonly');
+                }
+            });
+        }
+
+        setupEmailDomain('email-select-pc', 'email-domain-pc');
+        setupEmailDomain('email-select-tab', 'email-domain-tab');
+        setupEmailDomain('email-select-mobile', 'email-domain-mobile');
 
         // 문의사항 제출 처리
         const contactForm = document.getElementById('contactForm');
@@ -192,7 +204,7 @@
             const phonePart3 = document.querySelector('input[name="phone-part3"]:valid').value;
             const phone = `${phonePart1}-${phonePart2}-${phonePart3}`;
             const emailPrefix = document.querySelector('input[name="email-prefix"]:valid').value;
-            const emailDomain = document.querySelector('select[name="email-domain"]:valid').value;
+            const emailDomain = document.querySelector('input[name="email-domain"]:valid').value;
             const email = `${emailPrefix}@${emailDomain}`;
             const subject = document.querySelector('input[name="subject"]:valid').value;
             const message = document.querySelector('textarea[name="message"]:valid').value;
