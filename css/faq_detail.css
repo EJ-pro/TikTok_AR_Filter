@@ -1,79 +1,40 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
 }
 
-h1 {
-    text-align: center;
-    margin: 20px 0;
-}
-
-form {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.width-100 {
+    width: 100%;
 }
 
 .form-section {
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
-.faq-image {
-    width: 100%;
-    height: auto;
-}
-
-input[type="text"], input[type="email"], input[type="file"], select, textarea {
+input[type="text"], input[type="email"], input[type="file"], select, textarea, input[type="submit"] {
+    display: block;
     width: calc(100% - 40px);
-    margin: 0 20px;
+    margin: 10px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    width: calc(100% - 40px);
-    margin: 0 20px;
-    padding: 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input[type="submit"]:disabled {
-    background-color: #aaa;
-    cursor: not-allowed;
-}
-
-textarea {
-    height: 150px;
-    resize: vertical;
 }
 
 .phone-input input {
-    width: calc(33% - 40px);
-    margin: 0 10px;
-}
-
-.email-input {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    width: calc(30% - 14px);
+    margin: 5px 5px;
 }
 
 .email-input input, .email-input select {
-    width: calc(50% - 40px);
-    margin: 0 20px;
+    display: inline-block;
+    width: calc(50% - 10px);
+    margin: 5px 5px;
+}
+
+textarea {
+    height: 100px;
 }
 
 .privacy-policy {
@@ -85,19 +46,48 @@ textarea {
     background-color: #f9f9f9;
 }
 
+.submit-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pc-only {
+    display: block;
+}
+
+.tab-only, .mobile-only {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .pc-only {
+        display: none;
+    }
+    .tab-only {
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
+    .tab-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+
     input[type="text"], input[type="email"], input[type="file"], select, textarea, input[type="submit"] {
         width: calc(100% - 20px);
         margin: 0 10px;
     }
 
     .phone-input input {
-        width: calc(100% / 3 - 20px);
+        width: calc(100% / 3 - 14px);
         margin: 0 5px;
     }
 
     .email-input input, .email-input select {
-        width: calc(50% - 20px);
-        margin: 0 10px;
+        width: calc(50% - 10px);
+        margin: 0 5px;
     }
 }
