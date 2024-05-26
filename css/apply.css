@@ -83,8 +83,8 @@ main {
     color: white;
     font-size: 25px;
     font-weight: bold;
+    align-items: center;
     cursor: pointer;
-    margin-right: 24px; /* 버튼 사이 간격 조정 */
     margin-bottom: 75px; /* 버튼 사이 간격 조정 */
     border-radius: 10px; /* 라운드 적용 */
     display: inline-block; /* 가로 배치를 위해 인라인 블록 요소로 변경 */
@@ -118,17 +118,15 @@ input[type='radio'] {
   }
 
 .radio-label {
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 /* 모바일에서 토글 및 라디오 버튼 크기 설정 */
 .toggle-button.mobile-size{
-    margin-bottom: 58px; /* 버튼 사이 간격 조정 */
-    margin: 6.5px; /* 버튼 사이 간격 조정 */
-    width: 95px;
-    height: 35px;
-    font-size: 16px;
+    margin-bottom: 11px;
+    width: 40%;
+    height: 50px;
 }
 .radio-button.mobile-size{
     width: 13px;
@@ -140,7 +138,13 @@ input[type='radio'] {
     height: 17.5px;
     font-size: 12px;
 }
-
+@media (max-width: 767px) {
+    .toggle-buttons.mobile-only {
+        display: flex;
+        flex-wrap: wrap; /* 버튼이 두 줄로 나눠지도록 설정 */
+        justify-content: space-between; /* 버튼 사이 간격 조정 */
+    }
+}
 /* 태블릿에서 토글 및 라디오 버튼 크기 설정 */
 .toggle-button.tab-size{    
     margin: 20px; /* 버튼 사이 간격 조정 */
