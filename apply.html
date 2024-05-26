@@ -5,83 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>틱톡 대학생 AR 메이커톤</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/apply.css">
-    <link rel="icon" href="image/TikTok_Circle.png">
+    <link rel="stylesheet" href="http://tiktokmakeathon.info/css/common.css">
+    <link rel="stylesheet" href="http://tiktokmakeathon.info/css/apply.css">
+    <link rel="icon" href="http://tiktokmakeathon.info/image/tiktok_circle.svg">
 </head>
 
 <body>
     <header>
-        <img src="image/TikTok_logo.png" alt="TikTok Logo" class="logo">
+        <img src="http://tiktokmakeathon.info/image/tiktok_logo.svg" alt="tiktok Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="apply.html">APPLY</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="http://tiktokmakeathon.info/index.html">HOME</a></li>
+                <li><a href="http://tiktokmakeathon.info/apply.html">APPLY</a></li>
+                <li><a href="http://tiktokmakeathon.info/faq.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="images">
-            <img src="image/Apply/PC_apply_image_1.png" alt="apply image 1" class="width-100 pc-only">
-            <img src="image/Apply/Tab_apply_image1.png" alt="apply image 1" class="width-100 tab-only">
-            <img src="image/Apply/Mobile_apply_image1.png" alt="apply image 1" class="width-100 mobile-only">
+            <img src="http://tiktokmakeathon.info/image/apply/pc_apply_image_1.png" alt="apply image 1" class="width-100 pc-only">
+            <img src="http://tiktokmakeathon.info/image/apply/tab_apply_image_1.png" alt="apply image 1" class="width-100 tab-only">
+            <img src="http://tiktokmakeathon.info/image/apply/mobile_apply_image_1.png" alt="apply image 1" class="width-100 mobile-only">
 
             <!-- 웹 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons pc-only">
-                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1nCTw4xQaW7Z3svAMFR5m3ek54dQHR2aktn5GI25tJsk/edit?usp=forms_home&ths=true')">서울</button>
-                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1_wNZfRHhcUVeJB_YLILwJ1q5lPlHftNmvqRysw56SB4/edit')">대전</button>
-                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/17Y29gQ994vg0S50TSKkgKWuG1PVoKNQv3-5e1B1Rp4c/edit')">광주</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1twm3mqf1cNZnsJOltohYNZqrKuH7ZEAJRoi8IQ9M0Gs/viewform?edit_requested=true')">서울/경기1차</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1B7quvh5tIPaS2U9WBK2I8cnWl4LxQ_9YVIPhZFe4iE0/viewform?edit_requested=true')">서울/경기2차</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1Oe6nPNNfKz3N0GyD5z2gfJev6FOJZ5ZklhRGKHNHe30/viewform?edit_requested=true')">대전</button>
+                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1L8Ujcppf7NXCyPpg3pXf1JTZjPR7vm0m07JSYwzB0Jg/viewform?edit_requested=true')">광주</button> 
             </div>
 
             <div class="radio-buttons pc-only">
-                <input type="radio" name="participation" id="team" class="radio-button web-size" onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="team" class="radio-button web-size"
+                    onclick="toggleSelectedRadio(this)">
                 <label for="team" class="radio-label web-size">팀 참가</label>
-                <input type="radio" name="participation" id="individual" class="radio-button web-size" onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="individual" class="radio-button web-size"
+                    onclick="toggleSelectedRadio(this)">
                 <label for="individual" class="radio-label web-size">개인 참가</label>
             </div>
 
             <!-- 모바일 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons mobile-only">
-                <button class="toggle-button mobile-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1nCTw4xQaW7Z3svAMFR5m3ek54dQHR2aktn5GI25tJsk/edit?usp=forms_home&ths=true')">서울</button>
-                <button class="toggle-button mobile-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1_wNZfRHhcUVeJB_YLILwJ1q5lPlHftNmvqRysw56SB4/edit')">대전</button>
-                <button class="toggle-button mobile-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/17Y29gQ994vg0S50TSKkgKWuG1PVoKNQv3-5e1B1Rp4c/edit')">광주</button>
+                <button class="toggle-button mobile-size" style="font-size: 12px;" onclick="toggleSelected(this, 'docs.google.com/forms/d/1twm3mqf1cNZnsJOltohYNZqrKuH7ZEAJRoi8IQ9M0Gs/viewform?edit_requested=true')">서울/경기1차</button>
+                <button class="toggle-button mobile-size" style="font-size: 12px;"onclick="toggleSelected(this, 'docs.google.com/forms/d/1B7quvh5tIPaS2U9WBK2I8cnWl4LxQ_9YVIPhZFe4iE0/viewform?edit_requested=true')">서울/경기2차</button>
+                <button class="toggle-button mobile-size" style="font-size: 12px;"onclick="toggleSelected(this, 'docs.google.com/forms/d/1Oe6nPNNfKz3N0GyD5z2gfJev6FOJZ5ZklhRGKHNHe30/viewform?edit_requested=true')">대전</button>
+                <button class="toggle-button mobile-size" style="font-size: 12px;"onclick="toggleSelected(this, 'docs.google.com/forms/d/1L8Ujcppf7NXCyPpg3pXf1JTZjPR7vm0m07JSYwzB0Jg/viewform?edit_requested=true')">광주</button> 
             </div>
 
             <div class="radio-buttons mobile-only">
-                <input type="radio" name="participation" id="team-mobile" class="radio-button mobile-size" onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="team-mobile" class="radio-button mobile-size"
+                    onclick="toggleSelectedRadio(this)">
                 <label for="team-mobile" class="radio-label mobile-size">팀 참가</label>
-                <input type="radio" name="participation" id="individual-mobile" class="radio-button mobile-size" onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="individual-mobile" class="radio-button mobile-size"
+                    onclick="toggleSelectedRadio(this)">
                 <label for="individual-mobile" class="radio-label mobile-size">개인 참가</label>
             </div>
 
             <!-- 태블릿 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons tab-only">
-                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1nCTw4xQaW7Z3svAMFR5m3ek54dQHR2aktn5GI25tJsk/edit?usp=forms_home&ths=true')">서울</button>
-                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1_wNZfRHhcUVeJB_YLILwJ1q5lPlHftNmvqRysw56SB4/edit')">대전</button>
-                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/17Y29gQ994vg0S50TSKkgKWuG1PVoKNQv3-5e1B1Rp4c/edit')">광주</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1twm3mqf1cNZnsJOltohYNZqrKuH7ZEAJRoi8IQ9M0Gs/viewform?edit_requested=true')">서울/경기1차</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1B7quvh5tIPaS2U9WBK2I8cnWl4LxQ_9YVIPhZFe4iE0/viewform?edit_requested=true')">서울/경기2차</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1Oe6nPNNfKz3N0GyD5z2gfJev6FOJZ5ZklhRGKHNHe30/viewform?edit_requested=true')">대전</button>
+                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1L8Ujcppf7NXCyPpg3pXf1JTZjPR7vm0m07JSYwzB0Jg/viewform?edit_requested=true')">광주</button> 
             </div>
 
             <div class="radio-buttons tab-only">
-                <input type="radio" name="participation" id="team-tab" class="radio-button tab-size" onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="team-tab" class="radio-button tab-size"
+                    onclick="toggleSelectedRadio(this)">
                 <label for="team-tab" class="radio-label tab-size">팀 참가</label>
-                <input type="radio" name="participation" id="individual-tab" class="radio-button tab-size" onclick="toggleSelectedRadio(this)">
+                <input type="radio" name="participation" id="individual-tab" class="radio-button tab-size"
+                    onclick="toggleSelectedRadio(this)">
                 <label for="individual-tab" class="radio-label tab-size">개인 참가</label>
             </div>
 
-            <img src="image/Apply/PC_apply_image2.png" alt="apply image 2" class="width-100 pc-only">
-            <img src="image/Apply/Tab_image_image2.png" alt="Tab apply image 2" class="width-100 tab-only">
-            <img src="image/Apply/Mobile_image_image2.png" alt="Mobile apply image 2" class="width-100 mobile-only">
+            <img src="http://tiktokmakeathon.info/image/apply/pc_apply_image_2.png" alt="apply image 2" class="width-100 pc-only">
+            <img src="http://tiktokmakeathon.info/image/apply/tab_apply_image_2.png" alt="tab apply image 2" class="width-100 tab-only">
+            <img src="http://tiktokmakeathon.info/image/apply/mobile_apply_image_2.png" alt="mobile apply image 2" class="width-100 mobile-only">
 
-            <a id="apply-link-pc" href="apply.html" onclick="return false;">
-                <img id="apply-button-pc" src="image/Apply/Tab_btn.png" alt="PC Apply Button" class="pc-only disabled" style="width: 256px; height: 66px; margin-bottom: 122px;">
+            <a id="apply-link-pc" href="http://tiktokmakeathon.info/apply.html" onclick="return false;">
+                <img id="apply-button-pc" src="http://tiktokmakeathon.info/image/apply/mobile_btn.png" alt="pc apply Button"
+                    class="pc-only disabled" style="width: 256px; height: 66px; margin-bottom: 52px;">
             </a>
-            <a id="apply-link-tab" href="apply.html" onclick="return false;">
-                <img id="apply-button-tab" src="image/Apply/Tab_btn.png" alt="Tab Apply Button" class="tab-only disabled" style="width: 256px; height: 70px; margin-bottom: 271px;">
+            <a id="apply-link-tab" href="http://tiktokmakeathon.info/apply.html" onclick="return false;">
+                <img id="apply-button-tab" src="http://tiktokmakeathon.info/image/apply/mobile_btn.png" alt="tab apply Button"
+                    class="tab-only disabled" style="width: 256px; height: 70px; margin-bottom: 201px;">
             </a>
-            <a id="apply-link-mobile" href="apply.html" onclick="return false;">
-                <img id="apply-button-mobile" src="image/Apply/Mobile_btn.png" alt="Mobile Apply Button" class="mobile-only disabled" style="width: 260px; height: 65px; margin-bottom: 119px;">
+            <a id="apply-link-mobile" href="http://tiktokmakeathon.info/apply.html" onclick="return false;">
+                <img id="apply-button-mobile" src="http://tiktokmakeathon.info/image/apply/mobile_btn.png" alt="mobile apply Button"
+                    class="mobile-only disabled" style="width: 260px; height: 65px; margin-bottom: 49px;">
             </a>
+
+            <img src="http://tiktokmakeathon.info/image/pc_footer.png" alt="pc Image 10" class="width-100 pc-only" style=" margin-top: 110px;">
+            <img src="http://tiktokmakeathon.info/image/mobile_footer.png" alt="mobile Image 9" class="width-100 mobile-only">
+            <img src="http://tiktokmakeathon.info/image/tab_footer.png" alt="tablet Image 9" class="width-100 tab-only">
         </section>
 
         <script>
@@ -110,48 +126,48 @@
                 var selectedToggle = document.querySelector('.toggle-button.selected');
                 var selectedRadio = document.querySelector('.radio-button.selected');
 
-                var applyLinkPC = document.getElementById('apply-link-pc');
-                var applyLinkTab = document.getElementById('apply-link-tab');
-                var applyLinkMobile = document.getElementById('apply-link-mobile');
+                var applyLinkpc = document.getElementById('apply-link-pc');
+                var applyLinktab = document.getElementById('apply-link-tab');
+                var applyLinkmobile = document.getElementById('apply-link-mobile');
 
-                var applyButtonPC = document.getElementById('apply-button-pc');
-                var applyButtonTab = document.getElementById('apply-button-tab');
-                var applyButtonMobile = document.getElementById('apply-button-mobile');
+                var applyButtonpc = document.getElementById('apply-button-pc');
+                var applyButtontab = document.getElementById('apply-button-tab');
+                var applyButtonmobile = document.getElementById('apply-button-mobile');
 
                 if (selectedToggle && selectedRadio) {
-                    applyButtonPC.src = 'image/Apply/Mobile_btn_check.png';
-                    applyButtonTab.src = 'image/Apply/Mobile_btn_check.png';
-                    applyButtonMobile.src = 'image/Apply/Mobile_btn_check.png';
+                    applyButtonpc.src = 'image/apply/mobile_btn_check.png';
+                    applyButtontab.src = 'image/apply/mobile_btn_check.png';
+                    applyButtonmobile.src = 'image/apply/mobile_btn_check.png';
 
-                    applyButtonPC.classList.remove('disabled');
-                    applyButtonTab.classList.remove('disabled');
-                    applyButtonMobile.classList.remove('disabled');
+                    applyButtonpc.classList.remove('disabled');
+                    applyButtontab.classList.remove('disabled');
+                    applyButtonmobile.classList.remove('disabled');
 
                     var newUrl = `https://${selectedLocation}`;
 
-                    applyLinkPC.href = newUrl;
-                    applyLinkTab.href = newUrl;
-                    applyLinkMobile.href = newUrl;
+                    applyLinkpc.href = newUrl;
+                    applyLinktab.href = newUrl;
+                    applyLinkmobile.href = newUrl;
 
-                    applyLinkPC.onclick = null;
-                    applyLinkTab.onclick = null;
-                    applyLinkMobile.onclick = null;
+                    applyLinkpc.onclick = null;
+                    applyLinktab.onclick = null;
+                    applyLinkmobile.onclick = null;
                 } else {
-                    applyButtonPC.src = 'image/Apply/Tab_btn.png';
-                    applyButtonTab.src = 'image/Apply/Tab_btn.png';
-                    applyButtonMobile.src = 'image/Apply/Mobile_btn.png';
+                    applyButtonpc.src = 'image/apply/mobile_btn.png';
+                    applyButtontab.src = 'image/apply/mobile_btn.png';
+                    applyButtonmobile.src = 'image/apply/mobile_btn.png';
 
-                    applyButtonPC.classList.add('disabled');
-                    applyButtonTab.classList.add('disabled');
-                    applyButtonMobile.classList.add('disabled');
+                    applyButtonpc.classList.add('disabled');
+                    applyButtontab.classList.add('disabled');
+                    applyButtonmobile.classList.add('disabled');
 
-                    applyLinkPC.href = "apply.html";
-                    applyLinkTab.href = "apply.html";
-                    applyLinkMobile.href = "apply.html";
+                    applyLinkpc.href = "apply.html";
+                    applyLinktab.href = "apply.html";
+                    applyLinkmobile.href = "apply.html";
 
-                    applyLinkPC.onclick = function() { return false; };
-                    applyLinkTab.onclick = function() { return false; };
-                    applyLinkMobile.onclick = function() { return false; };
+                    applyLinkpc.onclick = function () { return false; };
+                    applyLinktab.onclick = function () { return false; };
+                    applyLinkmobile.onclick = function () { return false; };
                 }
             }
         </script>
