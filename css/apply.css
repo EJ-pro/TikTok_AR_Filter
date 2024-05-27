@@ -132,12 +132,14 @@ input[type='radio'] {
 .radio-button.mobile-size{
     width: 13px;
     margin-top: 58px; /* 버튼 사이 간격 조정 */
+    justify-content: center;
     height: 13px;
 }
 .radio-label.mobile-size {
-    width: 12px;
-    height: 17.5px;
-    font-size: 15px;
+    width: 15px;
+    font-size: 16px;
+    height: 13px;
+    justify-content: center;
 }
 @media (max-width: 767px) {
     .toggle-buttons.mobile-only {
