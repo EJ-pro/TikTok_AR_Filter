@@ -25,13 +25,13 @@
     </header>
     <main>
         <section class="images">
-            <img src="http://tiktokmakeathon.info/image/apply/pc_apply_image_11.png" alt="apply image 1" class="width-100 pc-only">
+            <img src="http://tiktokmakeathon.info/image/apply/pc_apply_image_1.png" alt="apply image 1" class="width-100 pc-only">
             <img src="http://tiktokmakeathon.info/image/apply/tab_apply_image_1.png" alt="apply image 1" class="width-100 tab-only">
-            <img src="http://tiktokmakeathon.info/image/apply/mobile_apply_image_1.png" alt="apply image 1" class="width-100 mobile-only">
-
+            <img src="http://tiktokmakeathon.info/image/apply/mobile_apply_image_1.png" alt="apply image 1" class="width-100 mobile-only" style="margin-bottom: 40px;">
+        
             <!-- 웹 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons pc-only">
-                <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1twm3mqf1cNZnsJOltohYNZqrKuH7ZEAJRoi8IQ9M0Gs/viewform?edit_requested=true')">서울/경기1차</button>
+                <button disabled class="toggle-button web-size" style="color: #868686; border: 2px solid #590C1B;" onclick="toggleSelected(this, '')">서울/경기1차</button>
                 <button class="toggle-button web-size" style="margin-left: 15px; margin-right: 15px;" onclick="toggleSelected(this, 'docs.google.com/forms/d/1B7quvh5tIPaS2U9WBK2I8cnWl4LxQ_9YVIPhZFe4iE0/viewform?edit_requested=true')">서울/경기2차</button>
                 <button class="toggle-button web-size" style="margin-right: 15px;" onclick="toggleSelected(this, 'docs.google.com/forms/d/1Oe6nPNNfKz3N0GyD5z2gfJev6FOJZ5ZklhRGKHNHe30/viewform?edit_requested=true')">대전</button>
                 <button class="toggle-button web-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1L8Ujcppf7NXCyPpg3pXf1JTZjPR7vm0m07JSYwzB0Jg/viewform?edit_requested=true')">광주</button> 
@@ -48,7 +48,7 @@
 
             <!-- 모바일 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons mobile-only" >
-                <button class="toggle-button mobile-size" style="font-size: 16px; padding: 0px;" onclick="toggleSelected(this, 'docs.google.com/forms/d/1twm3mqf1cNZnsJOltohYNZqrKuH7ZEAJRoi8IQ9M0Gs/viewform?edit_requested=true')">서울/경기1차</button>
+                <button disabled class="toggle-button mobile-size" style="color: #868686; border: 2px solid #590C1B; font-size: 16px; padding: 0px;" onclick="toggleSelected(this, '')">서울/경기1차</button>
                 <button class="toggle-button mobile-size" style="font-size: 16px; padding: 0px;"onclick="toggleSelected(this, 'docs.google.com/forms/d/1B7quvh5tIPaS2U9WBK2I8cnWl4LxQ_9YVIPhZFe4iE0/viewform?edit_requested=true')">서울/경기2차</button>
                 <button class="toggle-button mobile-size" style="font-size: 16px; padding: 0px;"onclick="toggleSelected(this, 'docs.google.com/forms/d/1Oe6nPNNfKz3N0GyD5z2gfJev6FOJZ5ZklhRGKHNHe30/viewform?edit_requested=true')">대전</button>
                 <button class="toggle-button mobile-size" style="font-size: 16px; padding: 0px;"onclick="toggleSelected(this, 'docs.google.com/forms/d/1L8Ujcppf7NXCyPpg3pXf1JTZjPR7vm0m07JSYwzB0Jg/viewform?edit_requested=true')">광주</button> 
@@ -65,10 +65,10 @@
 
             <!-- 태블릿 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
             <div class="toggle-buttons tab-only">
-                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1twm3mqf1cNZnsJOltohYNZqrKuH7ZEAJRoi8IQ9M0Gs/viewform?edit_requested=true')">서울/경기1차</button>
-                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1B7quvh5tIPaS2U9WBK2I8cnWl4LxQ_9YVIPhZFe4iE0/viewform?edit_requested=true')">서울/경기2차</button>
-                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1Oe6nPNNfKz3N0GyD5z2gfJev6FOJZ5ZklhRGKHNHe30/viewform?edit_requested=true')">대전</button>
-                <button class="toggle-button tab-size" onclick="toggleSelected(this, 'docs.google.com/forms/d/1L8Ujcppf7NXCyPpg3pXf1JTZjPR7vm0m07JSYwzB0Jg/viewform?edit_requested=true')">광주</button> 
+                <button disabled class="toggle-button tab-size" style="font-size: 20px; color: #868686; border: 2px solid #590C1B;" onclick="toggleSelected(this, '')">서울/경기1차</button>
+                <button class="toggle-button tab-size" style="font-size: 20px;" onclick="toggleSelected(this, 'docs.google.com/forms/d/1B7quvh5tIPaS2U9WBK2I8cnWl4LxQ_9YVIPhZFe4iE0/viewform?edit_requested=true')">서울/경기2차</button>
+                <button class="toggle-button tab-size" style="font-size: 20px;" onclick="toggleSelected(this, 'docs.google.com/forms/d/1Oe6nPNNfKz3N0GyD5z2gfJev6FOJZ5ZklhRGKHNHe30/viewform?edit_requested=true')">대전</button>
+                <button class="toggle-button tab-size" style="font-size: 20px;" onclick="toggleSelected(this, 'docs.google.com/forms/d/1L8Ujcppf7NXCyPpg3pXf1JTZjPR7vm0m07JSYwzB0Jg/viewform?edit_requested=true')">광주</button> 
             </div>
 
             <div class="radio-buttons tab-only">
