@@ -25,9 +25,9 @@
     </header>
     <main>
         <section class="images">
-            <img src="image/Apply/pc_apply_image_1.png" alt="apply image 1" class="width-100 pc-only">
-            <img src="image/Apply/tab_apply_image_1.png" alt="apply image 1" class="width-100 tab-only">
-            <img src="image/Apply/mobile_apply_image_1.png" alt="apply image 1" class="width-100 mobile-only"
+            <img src="image/apply/pc_apply_image_1.png" alt="apply image 1" class="width-100 pc-only">
+            <img src="image/apply/tab_apply_image_1.png" alt="apply image 1" class="width-100 tab-only">
+            <img src="image/apply/mobile_apply_image_1.png" alt="apply image 1" class="width-100 mobile-only"
                 style="margin-bottom: 40px;">
 
             <!-- 웹 화면에서 보이는 토글 버튼 및 라디오 버튼 -->
@@ -95,21 +95,21 @@
                 <label for="individual-tab" class="radio-label tab-size">개인 참가</label>
             </div>
 
-            <img src="image/Apply/pc_apply_image_2.png" alt="apply image 2" class="width-100 pc-only">
-            <img src="image/Apply/tab_apply_image_2.png" alt="tab apply image 2" class="width-100 tab-only">
-            <img src="image/Apply/mobile_apply_image_2.png" alt="mobile apply image 2" class="width-100 mobile-only">
+            <img src="image/apply/pc_apply_image_2.png" alt="apply image 2" class="width-100 pc-only">
+            <img src="image/apply/tab_apply_image_2.png" alt="tab apply image 2" class="width-100 tab-only">
+            <img src="image/apply/mobile_apply_image_2.png" alt="mobile apply image 2" class="width-100 mobile-only">
 
             <a id="apply-link-pc" href="apply.html" onclick="return false;">
-                <img id="apply-button-pc" src="image/Apply/mobile_btn.png" alt="pc apply Button"
+                <img id="apply-button-pc" src="image/apply/mobile_btn.png" alt="pc apply Button"
                     class="pc-only disabled" style="width: 275px; height: 84px; margin-top:70px; margin-bottom: 52px;">
             </a>
             <a id="apply-link-tab" href="apply.html" onclick="return false;">
-                <img id="apply-button-tab" src="image/Apply/mobile_btn.png" alt="tab apply Button"
+                <img id="apply-button-tab" src="image/apply/mobile_btn.png" alt="tab apply Button"
                     class="tab-only disabled"
                     style="width: 275px; height: 84px; margin-top:70px; margin-bottom: 201px;">
             </a>
             <a id="apply-link-mobile" href="apply.html" onclick="return false;">
-                <img id="apply-button-mobile" src="image/Apply/mobile_btn.png" alt="mobile apply Button"
+                <img id="apply-button-mobile" src="image/apply/mobile_btn.png" alt="mobile apply Button"
                     class="mobile-only disabled" style="width: 260px; height: 65px; margin-top:70px;">
             </a>
 
@@ -154,9 +154,9 @@
                 var applyButtonmobile = document.getElementById('apply-button-mobile');
 
                 if (selectedToggle && selectedRadio) {
-                    applyButtonpc.src = 'image/Apply/mobile_btn_check.png';
-                    applyButtontab.src = 'image/Apply/mobile_btn_check.png';
-                    applyButtonmobile.src = 'image/Apply/mobile_btn_check.png';
+                    applyButtonpc.src = 'image/apply/mobile_btn_check.png';
+                    applyButtontab.src = 'image/apply/mobile_btn_check.png';
+                    applyButtonmobile.src = 'image/apply/mobile_btn_check.png';
 
                     applyButtonpc.classList.remove('disabled');
                     applyButtontab.classList.remove('disabled');
@@ -172,9 +172,9 @@
                     applyLinktab.onclick = null;
                     applyLinkmobile.onclick = null;
                 } else {
-                    applyButtonpc.src = 'image/Apply/mobile_btn.png';
-                    applyButtontab.src = 'image/Apply/mobile_btn.png';
-                    applyButtonmobile.src = 'image/Apply/mobile_btn.png';
+                    applyButtonpc.src = 'image/apply/mobile_btn.png';
+                    applyButtontab.src = 'image/apply/mobile_btn.png';
+                    applyButtonmobile.src = 'image/apply/mobile_btn.png';
 
                     applyButtonpc.classList.add('disabled');
                     applyButtontab.classList.add('disabled');
